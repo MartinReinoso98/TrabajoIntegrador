@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>San Juan Fibra</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="logo">
+            <a href="#home">San Juan Fibra</a>
+        </div>
+        <a href="#home">Inicio</a>
+        <a href="#home">Nosotros</a>
+        <a href="#bloque2">Planes</a>
+        <a href="#home">Sucursales</a>
+        <a href="#home">Solicitud</a>
+    </header>
+    <main class="contenedor">
+        <article class="bloque">
+        <h3 class="quienes">¿Quiénes somos?</h3>
+        <p>Somos una empresa sanjuanina destacada en el rubro de proveedor de internet, comprometida con ofrecer conexiones rápidas y confiables. Nos enfocamos en brindar soluciones accesibles que conectan hogares y negocios en San Juan. Nuestro objetivo es facilitar el acceso al mundo digital, asegurando una experiencia satisfactoria y cercana para nuestros clientes.</p>
+        <h3 class="solicitud">Solicitud de instalación</h3>
+        <form class="formul" action="/submitform" method="post">
+                <label for="fecha_solicitud">Fecha de la Solicitud:</label>
+                <input type="date" id="fecha_solicitud" name="fecha_solicitud">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" >
+                <label for="tipo_residencia">Tipo de Residencia:</label>
+                <select id="tipo_residencia" name="tipo_residencia">
+                    <option value="casa">Casa</option>
+                    <option value="departamento">Departamento</option>
+                    <option value="comercio">Comercio</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <label for="plan">Plan:</label>
+                <select id="plan" name="plan" >
+                    <option value="300Mb">300Mb</option>
+                    <option value="500Mb">500Mb</option>
+                    <option value="700Mb">700Mb</option>
+                </select>
+                <label for="horario_preferencia">Horario Preferido para la Instalación:</label>
+                <select id="horario_preferencia" name="horario_preferencia">
+                    <option value="mañana">Mañana</option>
+                    <option value="tarde">Tarde</option>
+                </select>
+            <h4>Datos Personales</h4>
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                <button type="submit" onclick="verificar()">Enviar Solicitud</button>
+        </form>
+        </article>
+    <article class="bloque2">
+            <h3 class="planes">Planes disponibles</h3>
+            <div class="carrusel">
+                <div class="carruseles" id="slider">
+                    <section class="seccioncarrusel">
+                        <img src="/300 MB.png" alt="imagen 1">
+                    </section>
+                    <section class="seccioncarrusel">
+                        <img src="/500 MB.png" alt="imagen 2">
+                    </section>
+                    <section class="seccioncarrusel">
+                        <img src="/700 MB.png" alt="imagen 3">
+                    </section>
+                </div>
+                <button class="botonizquierdo"><</button>
+                <button class="botonderecho">></button>
+            </div>
+            <article>
+            <h3 class="sucursales">Nuestras Sucursales</h3>
+            <ul class="sucursal">
+                <li>Rivadavia (Avenida Ignacio de la Rosa 2350 y Los Huarpes). Enfrente de Plaza Desamparados</li>
+                <li>Capital (Salta 390 esquina Mitre)</li>
+                <li>Santa Lucia (Avenida Libertador General San Martin S/N esquina Gorriti)</li>
+            </ul>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27203.383564438613!2d-68.54035365!3d-31.540005399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sar!4v1718564455794!5m2!1sen!2sar" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+    </main>
+</body>
+</html>
+
