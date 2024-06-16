@@ -21,6 +21,7 @@
     text-decoration: none;
     color: #070707;
     font-size: 25px;
+    margin-left: -80px;
 }
 
 .cabecera a:hover {
@@ -52,6 +53,7 @@ h3{
     display: grid;
     text-align: center;
     font-size: 25px;
+    margin-top: -10px;
 }
 .planes{
     display: grid;
@@ -121,7 +123,7 @@ li {
 p{
     display: grid;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-left: 10px;
     font-size: 20px;
 }
@@ -199,4 +201,21 @@ h4 {
 }
 input:focus{
     outline: none;
+}
+.cabecera img{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+}
+.pie img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+}
+.pie h3{
+    display: grid;
+    text-align: center;
+    padding-top: 15px;
 }
