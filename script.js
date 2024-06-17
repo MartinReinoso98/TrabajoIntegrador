@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let slider = document.querySelector("#slider"); // contenedor del carrusel
     let seccioncarrusel = document.querySelectorAll(".seccioncarrusel"); // contiene las imagenes
 
-    // iniciar letiables
+    // iniciar variables
     let posicion = 0; // posicion actual del carrusel
     let totalimg = seccioncarrusel.length; // numero de imagenes (3)
 
@@ -55,49 +55,51 @@ function verificar(e) {
     let fechaNac = document.getElementById('fecha_nacimiento').value;
     let telefono = document.getElementById('telefono').value;
 
-    // arreglo para campos incompletos (indefinido)
+// arreglo para campos incompletos (indefinido)
     let camposIncompletos = [];
 
-    // verifica campo por campo
-    if (fechaSoli === "") {
-        camposIncompletos.push('fecha_solicitud'); // push coloca el elemento en el arreglo 
-    }
-    if (direccion === "") {
-        camposIncompletos.push('direccion');
-    }
-    if (tipoResi === "") {
-        camposIncompletos.push('tipo_residencia');
-    }
-    if (plan === "") {
-        camposIncompletos.push('plan');
-    }
-    if (horarioPref === "") {
-        camposIncompletos.push('horario_preferencia');
-    }
-    if (dni === "") {
-        camposIncompletos.push('dni');
-    }
-    if (nombre === "") {
-        camposIncompletos.push('nombre');
-    }
-    if (apellido === "") {
-        camposIncompletos.push('apellido');
-    }
-    if (fechaNac === "") {
-        camposIncompletos.push('fecha_nacimiento');
-    }
-    if (telefono === "") {
-        camposIncompletos.push('telefono');
-    }
-    // muestra alerta
+// verifica campo por campo
+if (fechaSoli === "") {
+    camposIncompletos.push('fecha_solicitud'); // push coloca el elemento en el arreglo 
+}
+if (direccion === "") {
+    camposIncompletos.push('direccion');
+}
+if (tipoResi === "") {
+    camposIncompletos.push('tipo_residencia');
+}
+if (plan === "") {
+    camposIncompletos.push('plan');
+}
+if (horarioPref === "") {
+    camposIncompletos.push('horario_preferencia');
+}
+if (dni === "") {
+    camposIncompletos.push('dni');
+}
+if (nombre === "") {
+    camposIncompletos.push('nombre');
+}
+if (apellido === "") {
+    camposIncompletos.push('apellido');
+}
+if (fechaNac === "") {
+    camposIncompletos.push('fecha_nacimiento');
+}
+if (telefono === "") {
+    camposIncompletos.push('telefono');
+}
+
+    // muestra alerta y resalta en rojo
     if (camposIncompletos.length > 0) {
-        alert('Campos del formulario incompletos');
+        alert('Campos del formulario incompletos: ' + camposIncompletos.join(', '));
         // resalta
-        for (let i = 0; i < camposIncompletos.length; i++) {
-            let label = document.querySelector('label[for="' + camposIncompletos[i] + '"]');
+        camposIncompletos.forEach(function(campo) {
+            let label = document.querySelector('label[for="' + campo + '"]');
             if (label) {
-                label.style.color = 'red'; // color rojo
+                label.style.color = 'red'; // color red
             }
-        }
+        });
     }
 }
+
