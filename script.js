@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-function verificar(e) {
+function verificar() {
     // traer los valores
     let fechaSoli = document.getElementById('fecha_solicitud').value;
     let direccion = document.getElementById('direccion').value;
@@ -59,34 +59,34 @@ function verificar(e) {
     let camposIncompletos = [];
 
 // verifica campo por campo
-if (fechaSoli === "") {
+if (fechaSoli == "") {
     camposIncompletos.push('fecha_solicitud'); // push coloca el elemento en el arreglo 
 }
-if (direccion === "") {
+if (direccion == "") {
     camposIncompletos.push('direccion');
 }
-if (tipoResi === "") {
+if (tipoResi == "") {
     camposIncompletos.push('tipo_residencia');
 }
-if (plan === "") {
+if (plan == "") {
     camposIncompletos.push('plan');
 }
-if (horarioPref === "") {
+if (horarioPref == "") {
     camposIncompletos.push('horario_preferencia');
 }
-if (dni === "") {
+if (dni == "") {
     camposIncompletos.push('dni');
 }
-if (nombre === "") {
+if (nombre == "") {
     camposIncompletos.push('nombre');
 }
-if (apellido === "") {
+if (apellido == "") {
     camposIncompletos.push('apellido');
 }
-if (fechaNac === "") {
+if (fechaNac == "") {
     camposIncompletos.push('fecha_nacimiento');
 }
-if (telefono === "") {
+if (telefono == "") {
     camposIncompletos.push('telefono');
 }
 
@@ -97,9 +97,8 @@ if (telefono === "") {
         camposIncompletos.forEach(function(campo) {
             let label = document.querySelector('label[for="' + campo + '"]');
             if (label) {
-                label.style.color = 'red'; // color red
+                label.style.color = '#d6d6c1'; // color rojo
             }
         });
     }
 }
-
